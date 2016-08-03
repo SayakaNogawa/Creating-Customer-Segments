@@ -467,6 +467,78 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c">#which features are above or below the mean</span>
+<span class="p">(</span><span class="n">samples</span><span class="o">-</span><span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.895179</td>
+      <td>4.418448</td>
+      <td>5.440874</td>
+      <td>0.037546</td>
+      <td>5.001541</td>
+      <td>0.174706</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.229772</td>
+      <td>-0.510618</td>
+      <td>-0.576493</td>
+      <td>-0.514715</td>
+      <td>-0.404519</td>
+      <td>-0.424889</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.200567</td>
+      <td>-0.406304</td>
+      <td>-0.613470</td>
+      <td>2.093369</td>
+      <td>-0.585729</td>
+      <td>0.133881</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -487,13 +559,13 @@ div#notebook {
 <p><strong>Answer:</strong></p>
 <p><strong>No.1</strong></p>
 <hr>
-<p>I considered this sample customer is probably a retailer because all of the product categories sell well. Especially, Fresh, Milk and Grocery are spending large amount of money, and it is characteristic of a retailer that Detergents Paper sells well. Therefore, it is estimated that it is a retailer.</p>
+<p>I considered this sample customer is probably a retailer because all of the product categories are above the mean. A retailer has to prepare large amount of Grocery, Milk and Fresh in comparison with a cafe and a restaurant. Also, it is characteristic of a retailer that Detergents Paper is the second largest. Therefore, it is estimated that it is a retailer.</p>
 <p><strong>No.2</strong></p>
 <hr>
-<p>I considered this sample customer is probably a cafe because they purchased Fresh the most. Generally, a cafe sells a ready-cooked drink and food, so they put Fresh before Detergents Paper and Frozen.</p>
+<p>I considered this sample customer is probably a cafe because Fresh is the only one which above the mean. Generally, a cafe sells a ready-cooked drink, so they put Fresh before Grocery and Frozen. In addition, the cafe is not a coffee shop because they are not spending Milk, so I speculate that the cafe is something like a juice stand.</p>
 <p><strong>No.3</strong></p>
 <hr>
-<p>I considered this sample customer is probably a restaurant because the spending on Fresh and Frozen are very large. A restaurant has many fresh ingredients and they also have frozen food storable without losing freshness of raw food.</p>
+<p>I considered this sample customer is probably a hotel because the spending on Fresh and Frozen are above the mean. A Hotel has many fresh ingredients and they also have frozen food storable without losing freshness of raw food. Also, Delicatessen is above the mean, I speculate that it is eaten by guests at a room.</p>
 
 </div>
 </div>
@@ -520,7 +592,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
@@ -595,7 +667,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Produce a scatter matrix for each pair of features in the data</span>
@@ -2244,7 +2316,7 @@ x3Ecx3EcJw/eWHIcx3Ecx3Ecx8mDN5Ycx3Ecx3Ecx3Hy8P8B176NKL4GdJEAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Scale the data using the natural logarithm</span>
@@ -5443,7 +5515,7 @@ wm4fbAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Display the log-transformed sample data</span>
@@ -6937,9 +7009,9 @@ EZFYU6NIRERERERiTY0iERERERGJNTWKREREREQk1v4L32+bHD+ZY6wAAAAASUVORK5CYII=
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>The silhouette score of 2 clusters is 0.427244000945
 The silhouette score of 3 clusters is 0.399477098446
-The silhouette score of 4 clusters is 0.30134488582
+The silhouette score of 4 clusters is 0.307902175103
 The silhouette score of 5 clusters is 0.288067477466
-The silhouette score of 6 clusters is 0.267033796856
+The silhouette score of 6 clusters is 0.288964803312
 </pre>
 </div>
 </div>
@@ -6968,9 +7040,9 @@ The silhouette score of 6 clusters is 0.267033796856
 <ul>
 <li>The silhouette score of 2 clusters is 0.427244000945.</li>
 <li>The silhouette score of 3 clusters is 0.399477098446.</li>
-<li>The silhouette score of 4 clusters is 0.30134488582.</li>
+<li>The silhouette score of 4 clusters is 0.307902175103.</li>
 <li>The silhouette score of 5 clusters is 0.288067477466.</li>
-<li>The silhouette score of 6 clusters is 0.267033796856.</li>
+<li>The silhouette score of 6 clusters is 0.288964803312.</li>
 </ul>
 <p>The number of 2 clusters has the best silhouette score.</p>
 
@@ -7861,6 +7933,69 @@ fAAAgMkTfAAAgMkTfAAAgMkTfAAAgMkTfAAAgMkTfAAAgMn7PzRPdftLGorYAAAAAElFTkSuQmCC
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c">#which features are above or below the mean</span>
+<span class="p">(</span><span class="n">true_centers</span><span class="o">-</span><span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Segment 0</th>
+      <td>-0.219529</td>
+      <td>-0.519977</td>
+      <td>-0.568170</td>
+      <td>-0.210332</td>
+      <td>-0.537224</td>
+      <td>-0.300994</td>
+    </tr>
+    <tr>
+      <th>Segment 1</th>
+      <td>-0.615478</td>
+      <td>0.133578</td>
+      <td>0.251963</td>
+      <td>-0.430164</td>
+      <td>0.138481</td>
+      <td>-0.193429</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7880,10 +8015,10 @@ fAAAgMkTfAAAgMkTfAAAgMkTfAAAgMkTfAAAgMkTfAAAgMn7PzRPdftLGorYAAAAAElFTkSuQmCC
 <p><strong>Answer:</strong></p>
 <p><strong>Segment 0</strong></p>
 <hr>
-<p>I considered Segment 0 could be cafe or restaurant or Hotel because they are spending large amount of Fresh. It might be seen as a place which sells ready-cooked drink and food.</p>
+<p>I considered Segment 0 could be restaurants or Hotels. All of the product categories are below the mean, though they are spending more Fresh, Frozen and Delicatessen than the others. Therefore, it is estimated that they are restaurants or Hotels.</p>
 <p><strong>Segment 1</strong></p>
 <hr>
-<p>I considered Segment 1 could be retailer because they are spending large amount of Grocery. And, it is characteristic of a retailer that Detergents Paper sells well.</p>
+<p>I considered Segment 1 could be retailers because Grocery, Milk and Detergents Paper are above the mean. Also, it is characteristic of a retailer that Detergents Paper is the second largest. Therefore, it is estimated that they are retailers.</p>
 
 </div>
 </div>
@@ -7901,7 +8036,7 @@ fAAAgMkTfAAAgMkTfAAAgMkTfAAAgMkTfAAAgMkTfAAAgMn7PzRPdftLGorYAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Display the predictions</span>
@@ -7985,7 +8120,9 @@ The predictions for the sample point consistant with the above results (Sample p
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <hr>
-<p>We can not assume the change affects all customers equally. Performing an A/B test is all about considering subgroups of people and determining whether a certain change will affect that particular group, then we have to perform A/B tests on all types of groups. But now, we have two clusters of customers, so we can use these group to find the customers are more affected by the change in delivery service.</p>
+<p>We can not assume the change affects all customers equally. Performing an A/B test is all about considering subgroups of people and determining whether a certain change will affect that particular group, then we have to perform A/B tests on all types of groups. 
+But now, we already have two clusters of customers which are separated segment 0 and segment 1, we can testing the delivery service after/before the change for each segment. After that, we can find which segments are more affected by the change.
+Therefore, we can use these group to find the customers are more affected by the change in delivery service.</p>
 
 </div>
 </div>
@@ -8009,7 +8146,7 @@ The predictions for the sample point consistant with the above results (Sample p
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <hr>
-<p>Now, we have the clustering labels. With this, we now know that each customer falls into which cluster, hence we can identify the cluster that the change affects the most. This is how the wholesale distributor can label the new customers by using supervised learning with the customer segment data.</p>
+<p>The target variable is ten new customers. A supervised learner could be used to train on the original customers, however we already have the clustering labels. With this, the supervised learning algorism predict that ten new customers fall into which clusters. Thereby, the wholesale distributor can know each customer Which segment, the wholesale distributor classify each new customer to a customer segment to determine the most appropriate delivery service. This is how the wholesale distributor can label the new customers by using supervised learning with the customer segment data.</p>
 
 </div>
 </div>
@@ -8027,7 +8164,7 @@ The predictions for the sample point consistant with the above results (Sample p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Display the clustering results based on &#39;Channel&#39; data</span>
